@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161017063323) do
+ActiveRecord::Schema.define(version: 20161017115552) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(version: 20161017063323) do
     t.integer  "timezone_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.string   "image_url"
   end
 
   add_index "users", ["timezone_id"], name: "index_users_on_timezone_id", using: :btree
