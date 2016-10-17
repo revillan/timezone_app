@@ -7,3 +7,22 @@ export const addUser = function(user, success, error) {
     error
   });
 };
+
+export const fetchTimezones = function(success, error) {
+  $.ajax({
+    method: 'GET',
+    url: 'api/timezones',
+    success,
+    error
+  });
+};
+
+export const updateTimezone = function(id, timezone, success, error) {
+  $.ajax({
+    method: 'PATCH',
+    url: 'api/users/'+id,
+    data: timezone,
+    success,
+    error
+  });
+};

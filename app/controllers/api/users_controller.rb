@@ -1,10 +1,20 @@
 class Api::UsersController < ApplicationController
 
   def create
-    @user = User.find_by_name(params[:name])
-    @user = User.new(user_params) if @user.nil?
-    @user.timezone = Timezone.first
+    puts params
+    @user = User.find_by_name(params[:user][:name])
+    if @user.nil?
+      @user = User.new(user_params)
+      @user.timezone = Timezone.find_by_name("Pacific")
+    end
     if @user.save
+      render 'api/users/show'
+    end
+  end
+
+  def update
+    @user = User.find_by_id(params[:id])
+    if @user.update(timezone: Timezone.find_by_name(params[:timezone]))
       render 'api/users/show'
     end
   end

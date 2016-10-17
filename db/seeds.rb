@@ -7,4 +7,10 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 
-Timezone.create!({name: "San Francisco", diff: 4})
+Timezone.create!({name: "Atlantic", diff: -4})
+Timezone.create!({name: "Eastern", diff: -5})
+Timezone.create!({name: "Central", diff: -6})
+Timezone.create!({name: "Mountain", diff: -7})
+Timezone.create!({name: "Pacific", diff: -8})
+Timezone.create!({name: "Alaskan", diff: -9})
+Timezone.create!({name: "Hawaii-Aleutian", diff: -10})

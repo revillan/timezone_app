@@ -1,13 +1,8 @@
-class TimezonesController < ApplicationController
+class Api::TimezonesController < ApplicationController
 
-  def create
-    @timezone = Timezone.new(timezone_params)
-    @timezone.save
+  def index
+    @timezones = Timezone.all
+    render 'api/timezones/index'
   end
 
-  private
-
-  def timezone_params
-    params.require(:timezone).permit(:name, :diff)
-  end
 end

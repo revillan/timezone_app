@@ -8,9 +8,12 @@ const _default = Object.freeze({
 const TimezoneReducer = (state = {}, action) => {
   switch(action.type){
     case TimezoneConstants.RECEIVE_USER:
-      console.log("here");
       let user = action.user;
-      return merge( {}, _default, { user });
+      return merge( {}, state, { user });
+    case TimezoneConstants.RECEIVE_TIMEZONES:
+      console.log();
+      let timezones = action.timezones;
+      return merge({}, state, { timezones });
     default:
       return state;
   }
