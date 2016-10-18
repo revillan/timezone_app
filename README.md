@@ -1,28 +1,8 @@
-== README
+# Timezone App
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a full-stack Ruby on Rails application with a PostgreSQL
+database and a React/Redux frontend. To run, ensure that PostgreSQL is
+running, then from the root directory, run `npm install`, `rake db:
+reset` and then `rails s`, and navigate to [http://localhost:3000/](http://localhost:3000/).
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+The app includes Google authorization as well as live updates of other users changes through asynchronous AJAX calls made every 5 seconds.

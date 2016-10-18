@@ -8,6 +8,13 @@ module.exports = {
     path: path.join(__dirname, 'app', 'assets', 'javascripts'),
     filename: 'bundle.js'
   },
+  "engines": {
+    "node": "6.2.1",
+    "npm": "3.9.x"
+  },
+  "scripts": {
+    "postinstall": "./node_modules/.bin/webpack"
+  },
   plugins:[
    new webpack.DefinePlugin({
      'process.env':{
