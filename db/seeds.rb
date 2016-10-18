@@ -14,3 +14,5 @@ Timezone.create!({name: "Mountain", diff: -7})
 Timezone.create!({name: "Pacific", diff: -8})
 Timezone.create!({name: "Alaskan", diff: -9})
 Timezone.create!({name: "Hawaii-Aleutian", diff: -10})
+
+User.create!({name: "Reilly Villanueva", timezone_id: 5, image_url: "https://lh5.googleusercontent.com/-yujUy2MnDcU/AAAAAAAAAAI/AAAAAAAAAAA/AKTaeK8gtPFU6FLQ2tkg9YXivviMUsxPIw/s96-c/photo.jpg"})

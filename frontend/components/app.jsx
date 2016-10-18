@@ -30,15 +30,15 @@ class App extends React.Component {
 
   let loggedIn;
   if (this.props.timezone.user === undefined) {
-  loggedIn = (<GoogleLogin
+  loggedIn = (<div className="login-btn"><GoogleLogin
       clientId="327432815781-hln7qto00ru2p2ub4gv2s2h93rm0pdm2.apps.googleusercontent.com"
       buttonText="Login"
       onSuccess={(data) => this.props.createUser( {name: data.profileObj.name, image_url: data.profileObj.imageUrl}) }
       onFailure={(data) => console.log(data)} >
       <span> Login with Google</span>
-    </GoogleLogin>);
+    </GoogleLogin></div>);
   } else {
-    loggedIn = (<div><img src={this.props.timezone.user.image_url}/><div>I'M CURRENTLY IN
+    loggedIn = (<div className="user"><img src={this.props.timezone.user.image_url}/><div className="selector"> I'M CURRENTLY IN
       <select value={this.props.timezone.user.timezone.name} onChange={this.newTimezone.bind(this)}>
         <option value="Pacific">Pacific</option>
         <option value="Eastern">Eastern</option>

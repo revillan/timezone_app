@@ -13,7 +13,9 @@ const TimezoneReducer = (state = {}, action) => {
     case TimezoneConstants.RECEIVE_TIMEZONES:
       console.log();
       let timezones = action.timezones;
-      return merge({}, state, { timezones });
+      let newState = merge({}, state);
+      newState.timezones = timezones;
+      return newState;
     default:
       return state;
   }
