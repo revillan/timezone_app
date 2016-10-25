@@ -18,7 +18,7 @@ class Timezone extends React.Component {
     // today = today.getUTCDate();
     today.addHours(this.props.timezone.diff);
     let time =  today.toTimeString().slice(0,5);
-    if (parseInt(time.slice(0,2)) - 13 >= 1) {
+    if (parseInt(time.slice(0,2)) - 12 >= 1) {
       let hours = (parseInt(time.slice(0,2)) - 12).toString();
       time = hours + time.slice(2,5)+" pm";
     } else {
